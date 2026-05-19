@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --gold: #D4AF37;
+  --gold-light: #F5D76E;
+  --gold-dark: #9A7C1A;
+  --red: #C0392B;
+  --red-bright: #E74C3C;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --dark3: #222222;
+  --cream: #F5F0E8;
+  --muted: #888888;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--cream); font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::selection { background: var(--gold); color: var(--black); }
+
+.gold-text {
+  background: linear-gradient(135deg, #F5D76E 0%, #D4AF37 50%, #9A7C1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes bounceY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+.section-divider { width:100px; height:1px; background:linear-gradient(to right, transparent, #D4AF37, transparent); margin:0 auto; }
+.btn-clip { clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%); }
